@@ -1,0 +1,26 @@
+﻿
+@{
+    @model IEnumerable<Student>
+
+}
+
+
+@{
+    if (Model.Count() <= 0)
+    {
+        <h3 class="alert alert-danger">Pas d'étudiant inscrit dans ce cours !</h3>
+    }
+    else
+
+    {
+        <h1 class="display-4">La liste des cours disponible</h1>
+        <div style="width: 100%;display: grid;">
+            @foreach(Student s in Model){
+            <div>
+                @s.first_name
+            </div>
+            }
+        </div>
+    }
+}
+<a asp-controller="Course" asp-action="index"> GO BACK TO ALL COURSES</a>

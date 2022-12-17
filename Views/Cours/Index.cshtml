@@ -1,0 +1,16 @@
+﻿@{
+    @model IEnumerable<String>
+
+}
+<h1 class="display-4">La liste des cours disponible</h1>
+<div style="width: 100%;display: flex;align-items:center;justify-content: space-evenly;">
+    @{
+        foreach (String et in Model)
+        {
+           <a href="Course/getcourse/@et">
+                <div>@et</div>
+           </a>    
+        }
+    }
+</div>
+
